@@ -226,12 +226,14 @@ def reproject(
             Resampling.average,
             Resampling.mode
     kwargs:  dict, optional
-        Additional arguments passed to transformation function.
+        Additional arguments passed to transformation function. See GDAL's `papszWarpOptions`_.
 
     Returns
     ---------
     out: None
         Output is written to destination.
+        
+    .. _papszWarpOptions: http://www.gdal.org/structGDALWarpOptions.html#a0ed77f9917bb96c7a9aabd73d4d06e08
     """
     # Resampling guard.
     try:
